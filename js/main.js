@@ -13,16 +13,16 @@ function scrollDown() {
 }
 
 $(function () {
-	var hasBeenTrigged = false;
+	var hasBeenTriggered = false;
 	$(window).scroll(function () {
-		if ($(this).scrollTop() >= 100 && !hasBeenTrigged) {
+		if ($(this).scrollTop() >= 100 && !hasBeenTriggered) {
 			scrollDown();
-			hasBeenTrigged = true;
+			hasBeenTriggered = true;
 		}
 	});
 	$('#btn-down,#nobtn').click(function () {
 		scrollDown();
-		hasBeenTrigged = true;
+		hasBeenTriggered = true;
 	});
 	$('#sub').click(function () {
 		if ($("#email-text").val().length == 0) {
@@ -30,7 +30,7 @@ $(function () {
 		} else {
 			alert("Thank You For being a valuable customer");
 			scrollDown();
-			hasBeenTrigged = true;
+			hasBeenTriggered = true;
 		}
 	});
 });
